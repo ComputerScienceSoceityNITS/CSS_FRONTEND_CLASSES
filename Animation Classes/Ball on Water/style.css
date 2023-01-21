@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(to top, rgb(0, 221, 221), whitesmoke, rgb(255, 128, 149));
+}
+
+.line {
+    width: 100%;
+    height: 30rem;
+    background: rgba(181, 181, 255, 0.2);
+    transform: translateY(25rem);
+    backdrop-filter: blur(0.5rem);
+    border-top: 1px solid #fff;
+}
+
+.drop {
+    position: absolute;
+    top: -5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background: red;
+    box-shadow: 1px 1px 15px 0px black;
+    animation: dropEffect 3s linear infinite;
+}
+
+@keyframes dropEffect {
+    0% {
+        top: -5rem;
+    }
+
+    30% {
+        top: 75%;
+    }
+
+    50% {
+        top: 65%;
+        opacity: 1;
+    }
+
+    60% {
+        top: 72%;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
